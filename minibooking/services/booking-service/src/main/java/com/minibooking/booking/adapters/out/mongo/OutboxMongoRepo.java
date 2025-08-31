@@ -5,5 +5,4 @@ import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
-@Repository interface BookingMongoRepo extends MongoRepository<BookingDoc, UUID> {}
 @Repository interface OutboxMongoRepo extends MongoRepository<OutboxEventDoc, UUID> {}

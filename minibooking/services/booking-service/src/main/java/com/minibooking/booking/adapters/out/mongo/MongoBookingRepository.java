@@ -10,9 +10,9 @@ import java.util.UUID;
 
 @Repository
 public class MongoBookingRepository implements BookingRepository {
-    private final BookingMongoRepo repo;
+    private final BookingMongoRepository repo;
 
-    public MongoBookingRepository(BookingMongoRepo repo){ this.repo = repo; }
+    public MongoBookingRepository(BookingMongoRepository repo){ this.repo = repo; }
 
     @Override
     public void save(Booking b){

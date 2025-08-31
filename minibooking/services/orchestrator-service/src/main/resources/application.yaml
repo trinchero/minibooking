@@ -1,0 +1,10 @@
+server.port: 8083
+spring.kafka.bootstrap-servers: localhost:9092
+topics:
+  bookingRequested: booking.requested.v1
+  resourceEvents: resource.events.v1
+  bookingLifecycle: booking.lifecycle.v1
+spring.kafka.streams:
+  application-id: orchestrator-service
+  properties:
+    commit.interval.ms: 1000

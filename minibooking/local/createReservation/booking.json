@@ -1,0 +1,9 @@
+{
+  "userId": "u-1",
+  "resourceType": "ITEM",
+  "resourceRef": "ps5-001",
+  "slotFrom": "2025-09-01T18:00:00Z",
+  "slotTo": "2025-09-01T19:00:00Z",
+  "amount": 49.9,
+  "currency": "EUR"
+}

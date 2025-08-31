@@ -18,3 +18,12 @@ services:
     depends_on: [mongo]
     restart: "no"
     entrypoint: ["bash","-lc","sleep 2 && mongosh --host mongo:27017 --eval 'rs.initiate({_id:\"rs0\", members:[{_id:0, host:\"mongo:27017\"}]})' && echo 'Replica set ready'"]
+
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    depends_on: [redpanda]
+    ports:
+      - "8085:8080"
+    environment:
+      KAFKA_CLUSTERS_0_NAME: "local"
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: "redpanda:29092"
